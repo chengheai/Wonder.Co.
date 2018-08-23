@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body,
+    html {
+      line-height: 1;
+      font-weight: 200;
+      font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif
+    }
+    .clearfix {
+      display: inline-block
+    }
+    .clearfix:after {
+      display: block;
+      content: ".";
+      height: 0 ;
+      line-height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+    @media (-webkit-min-device-pixel-ratio: 1.5),
+    (min-device-pixel-ratio: 1.5) {
+      .border-1px::after {
+        -webkit-transform: scaleY(0.7);
+         transform: scaleY(0.7)
+      }
+    }
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-device-pixel-ratio: 2) {
+      .border-1px::after {
+        -webkit-transform: scaleY(0.7);
+        transform: scaleY(0.7)
+      }
+    }
+    div{
+      height: 220px;
+      width: 100%;
+      border:1px solid #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 80px;
+    }
+  </style>
+</head>
+<body>
+  <div class="border-1px">hello</div>
+</body>
+</html>

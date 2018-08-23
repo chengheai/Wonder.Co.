@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    window.onload = function(){
+      function doSumit(e){
+        if(e.keyCode === 13){
+          alert('enter')
+        }
+      };
+      // document.addEventListener('keydown',function(e){
+      //   if(e.keyCode === 13){
+      //     alert('enter')
+      //   }
+      // })
+      // function onclick(){
+      //   alert(1)
+      // }
+      document.addEventListener('keydown', doSumit)
+      // let btn = document.querySelector('button');
+      // btn.addEventListener('click',onclick)
+      // console.log(document.querySelector('button'))
+    }
+  </script>
+  <button>button</button>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const user = 'world';
+    console.log(`hello ${user}`);  // hello world
+    // 默认参数
+    function log(activity = 'skiing') {
+      console.log(activity)
+    }
+    log();
+    setTimeout(() => {
+      console.log('你好')
+    }, 1000);
+    // setInterval(() => {
+    //   console.log('哈哈哈')
+    // }, 500)
+    // 对象数组
+    const arr = [1, 2];
+    const [foo, bar] = arr;
+    console.log(foo)
+    // ...
+    const todos = ['learn dva'];
+    const q = [...todos, 'learn antd'];
+    console.log('...',q)
+    // 
+    const obj = {'name':'alex',age:12}
+    // console.log(obj.json())
+    console.log('obj:',obj)
+    console.log(JSON.stringify(obj))
+
+    // const attrs = {
+    //   href: 'http://example.org',
+    //   target: '_blank',
+    //   color:'red'
+    // };
+    // <a {...attrs}>Hello</a>
+    
+  </script>
+</body>
+</html>

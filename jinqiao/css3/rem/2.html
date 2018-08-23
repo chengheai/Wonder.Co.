@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    (function (window, document) {
+      var getRem = function () {
+        if (document) {
+          var html = document.documentElement;
+          var hWidth = (html.getBoundingClientRect().width) * (750 / 352);
+          console.log(hWidth)
+          html.style.fontSize = hWidth / 16 + "px";
+          console.log(html.style.fontSize)
+        }
+      };
+      getRem();
+      window.onresize = function () {
+        getRem();
+      }
+    })(window, document)
+  </script>
+</head>
+<body>
+  <div style="width: 1rem;height: 1rem;background: red"></div>
+</body>
+
+</html>

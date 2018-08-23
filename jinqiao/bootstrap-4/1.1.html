@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <style>
+    img {
+      width: 400px;
+      height: 300px;
+      background: #cccccc;
+      color: #ffffff;
+    }
+    .col{
+      border: 1px solid salmon;
+      background: #cccccc;
+    }
+  </style>
+</head>
+
+<body>
+  To switch directories, type
+  <kbd>cd</kbd> followed by the name of the directory.
+  <br> To edit settings, press
+  <kbd>
+    <kbd>ctrl</kbd> +
+    <kbd>,</kbd>
+  </kbd>
+
+  <table class="table table-hover table-dark mt-1">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <figure class="figure">
+    <img src="../images/12.jpg" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+    <figcaption class="figure-caption text-right">A caption for the above image.</figcaption>
+  </figure>
+  <div class="row">
+    <div class="col-4">
+      <div id="list-example" class="list-group">
+        <a class="list-group-item list-group-item-action" href="#list-item-1">Item 1</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-2">Item2</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-3">Item 3</a>
+        <a class="list-group-item list-group-item-action" href="#list-item-4">Item 4</a>
+      </div>
+    </div>
+    <div class="col-8">
+      <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+        <h4 id="list-item-1">Item 1</h4>
+        <p>gdfgdgdgdgdgsgsd<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></p>
+        <h4 id="list-item-2">Item 2</h4>
+        <p>根深蒂固山豆根豆腐干第三个豆腐干大师傅</p>
+        <h4 id="list-item-3">Item 3</h4>
+        <p>广泛大概豆腐干豆腐干大概多少过热特点</p>
+        <h4 id="list-item-4">Item 4</h4>
+        <p>啊饿啊分个大概豆腐干的话鬼画符鬼画符和</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-success clearfix">
+      <button type="button" class="btn btn-secondary float-left">Example Button floated left</button>
+      <button type="button" class="btn btn-secondary float-right">Example Button floated right</button>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+        <div class="w-100"></div>
+        <div class="col">Column</div>
+        <div class="col">Column</div>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col col-lg-2">
+          1 of 3
+        </div>
+        <div class="col-md-auto">
+          Variable width content
+        </div>
+        <div class="col col-lg-2">
+          3 of 3
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          1 of 3
+        </div>
+        <div class="col-md-auto">
+          Variable width content
+        </div>
+        <div class="col col-lg-2">
+          3 of 3
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col align-self-start">
+          One of three columns
+        </div>
+        <div class="col align-self-center">
+          One of three columns
+        </div>
+        <div class="col align-self-end">
+          One of three columns
+        </div>
+      </div>
+    </div>
+
+    <ul class="list-unstyled">
+      <li class="media">
+        <img class="mr-3" src="../images/12.jpg" alt="Generic placeholder image">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">List-based media object</h5>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        </div>
+      </li>
+      <li class="media my-4">
+        <img class="mr-3" src="../images/12.jpg" alt="Generic placeholder image">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">List-based media object</h5>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        </div>
+      </li>
+      <li class="media">
+        <img class="mr-3" src="../images/12.jpg" alt="Generic placeholder image">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">List-based media object</h5>
+          Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+        </div>
+      </li>
+    </ul>
+
+    <div class="alert alert-primary" role="alert">
+      This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+    </div>
+    
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button> 
+</body>
+
+</html>

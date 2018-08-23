@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .button {
+      width: 100vw;
+      height: 400px;
+      position: relative;
+      line-height: 100px;
+      text-align: center;
+      font-weight: bolder;
+    }
+    .button::before {
+      content: '';
+      /* 用伪元素来生成一个矩形 */
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      transform: skewY(-2deg);
+      background: #8BC34A;
+    }
+    img{
+      width: 100vw;
+      height: 300px;
+      object-fit: cover;
+      margin-bottom: 2%;
+    }
+  </style>
+</head>
+<body>
+  <img src="../images/12.jpg" alt="">
+  <div class="button">
+  </div>
+</body>
+</html>

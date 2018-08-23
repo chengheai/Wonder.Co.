@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    // index 	必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。
+    //  howmany 	必需。要删除的项目数量。如果设置为 0，则不会删除项目。
+    // item1, ..., itemX 	可选。向数组添加的新项目。
+
+    var arr = new Array(6)
+    arr[0] = "George"
+    arr[1] = "John"
+    arr[2] = "Thomas"
+    arr[3] = "James"
+    arr[4] = "Adrew"
+    arr[5] = "Martin"
+    let a = arr.slice()
+    console.log(a)
+    document.write(arr + "<br />")
+    arr.splice(2, 0, "William")
+    document.write(arr + "<br />")
+
+
+    /**
+     * slice()
+      第一个参数代表开始位置,第二个参数代表结束位置的下一个位置,截取出来的字符串的长度为第二个
+      参数与第一个参数之间的差;若参数值为负数,则将该值
+      加上字符串长度后转为正值;若第一个参数等于大于第二
+      个参数,则返回空字符串.
+
+      substring()
+      第一个参数代表开始位置,第二个参数代表结束位置的下一个位置;若参数值为负数,
+      则将该值转为0;两个参数中,取较小值作为开始位置,截取出来的字符串的
+      长度为较大值与较小值之间的差.
+
+      substr()
+      第一个参数代表开始位置,第二个参数代表截取的长度
+      
+      PS：字符串都从0开始计起
+     * 
+     * */ 
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

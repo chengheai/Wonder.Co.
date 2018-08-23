@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.js"></script>
+</head>
+<body>
+  <div id="app">
+    <parsent></parsent>
+  </div>
+  <script>
+    var childNode = {
+      template:`
+        <div>{{forChildMsg}}</div>
+      `,
+      props: ['for-child-msg']
+    };
+    var parsentNode = {
+      template: `
+        <div>
+          <child for-child-msg="aaa"></child>
+          <child for-child-msg="bbb"></child>
+        </div>
+      `,
+      components: {
+        child: childNode
+      }
+    };
+    new Vue({
+      el: '#app',
+      components: {
+        parsent: parsentNode
+      }
+    })
+  </script>
+</body>
+</html>

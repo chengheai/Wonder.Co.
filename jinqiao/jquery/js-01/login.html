@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../jquery.js"></script>
+  <script>
+    $(function(){
+      $('#mobile,#passwd1').bind('input propertychange', function() {
+        if($("#mobile").val()!=="" && $('#passwd1').val()!==""){
+            $('#btnLog').css({
+                background:"#BE9546",
+            });
+        }else{
+            $('#btnLog').css({
+                background:"#dcd3ca ",
+            });
+        }
+    });
+    })
+  </script>
+</head>
+<body>
+  <input type="text" id="mobile"><br />
+  <input type="text" id="passwd1"><br />
+  <button style="width: 100px;height: 60px;">登录</button>
+</body>
+</html>

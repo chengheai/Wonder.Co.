@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #box {
+      display: box;
+      width: 240px;
+      height: 100px;
+      margin: 0;
+      padding: 10px;
+      list-style: none;
+    }
+    #box li{
+      float: left;
+    }
+    #box li:nth-child(1) {
+      box-flex: 1;
+    }
+
+    #box li:nth-child(2) {
+      box-flex: 1;
+    }
+
+    #box li:nth-child(3) {
+      box-flex: 2;
+    }
+  </style>
+</head>
+
+<body>
+  <ul id="box">
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+  </ul>
+</body>
+
+</html>

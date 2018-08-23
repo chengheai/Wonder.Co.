@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="jquery.js"></script>
+</head>
+<body>
+  <button>display event.namespace</button>
+  <p></p>
+  <i></i>
+  <h4>12</h4>
+  <script>
+    // $("p").html('hello <b>world</b>')
+    var p = $('p')
+    $('i').html(function(n){
+      console.log(n);
+      return 'hello <b>123</b>'
+    })
+    var offset = p.offset();
+    p.html( "left: " + offset.left + ", top: " + offset.top );
+    console.log($("h4").height());
+    
+  </script>
+</body>
+
+</html>

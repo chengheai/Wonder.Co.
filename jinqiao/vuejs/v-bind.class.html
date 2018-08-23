@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .active{
+      color: red;
+    }
+    .text-danger{
+      background: #999999;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <button v-bind:disabled="isButtonDisabled">按钮</button>
+    <p v-bind:class="{ active: isActive}">12234</p>
+    <div v-bind:class="classObj">div</div>
+    <h3 v-bind:class="[currentClass, errorClass]">h3</h3>
+    <h4 v-bind:style="styleObj">h4</h4>
+    <input v-on:keyup.13="submit">
+    <input v-model.trim="msg">
+    <h5>{{msg}}</h5>
+  </div>
+  <script src="vue.js"></script>
+  <script>
+   var app = new Vue({
+     el: '#app',
+     data: {
+       isButtonDisabled:false,
+       isActive: true,
+       classObj:{
+         active: true,
+         'text-danger': true
+       },
+       currentClass:'active',
+       errorClass: 'text-danger',
+       styleObj: {
+         color: 'red',
+         background: '#999999'
+       },
+       msg:''
+     },
+     methods: {
+       submit:function(){
+         alert(112)
+       }
+     }
+   })
+  </script>
+</body>
+</html>

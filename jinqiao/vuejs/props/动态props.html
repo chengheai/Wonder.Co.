@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="example">
+    <parent></parent>
+  </div>
+  <script src="../vue.js"></script>
+  <script>
+    var childNode = {
+      template: '<div>{{MyMessage}}</div>',
+      props: ['MyMessage']
+    };
+    var parentNode = {
+      template: `
+        <div class="parent">
+          <child :my-message="data1"></child>
+          <child :my-message="data2"></child>
+        </div>
+    `,
+      components: {
+        'child': childNode
+      },
+      data(){
+        return {
+          'data1':'123',
+          'data2':'456'
+        }
+      },
+    };
+    new Vue({
+      el: '#example',
+      components: {
+        'parent': parentNode
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="jquery.js"></script>
+</head>
+<body style="height: 10000px;">
+  <p>111112</p>
+  <p>111112</p>
+  <p>111112</p>
+  <p>111112</p>
+  <h3>ffff</h3>
+  <h1>2344</h1>
+  <h1>2344</h1>
+  <h1>2344</h1>
+  <h1>2344</h1>
+  <h1>2344</h1>
+  <h1>2344</h1>
+  <h1>2344</h1>
+  <div></div>
+  <script>  
+    $('p').nextUntil('h3').css({background:'red'})
+    $('h1').prevUntil('h3').css({background: '#222'})
+    $(window).scroll(function(){
+      console.log('tag', $(document).scrollTop())
+      $('div').html()
+    })
+  </script>
+</body>
+
+</html>

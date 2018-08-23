@@ -1,0 +1,38 @@
+<html>
+<script src="vue.js"></script>
+<body>
+ <div id="app">
+ <!-- 类型为phone，最大长度为13 -->
+ <input type="phone" v-model="dataPhone" maxlength="13">
+ {{filter()}}
+ </div>
+</body>
+<script>
+ var vm = new Vue({
+ el: '#app',
+ data() {
+  return {
+  dataPhone: ''
+  }
+ },
+ methods:{
+ 	filter(){
+ 		return this.dataPhone.replace(/[ ]/g,"");
+ 	}
+ },
+ watch: {
+  // 通过watch来设置空格
+  dataPhone(newValue, oldValue) {
+  	console.log('newValue:',newValue)
+  	console.log('oldValue:',oldValue)
+  if (newValue.length > oldValue.length) { // 文本框中输入
+   if (newValue.length === 3 || newValue.length === 8) {
+   this.dataPhone += ' '
+   }
+  }
+  }
+
+ }
+ })
+</script>
+</html>

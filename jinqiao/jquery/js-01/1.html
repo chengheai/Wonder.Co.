@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../jquery.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('div').mouseenter(function(){
+        $(this).html('hhh')
+      })
+      $('input').focus(function(){
+        $(this).css({'background': 'red'})
+      })
+      $('input').blur(function(){
+        $(this).css({'background': ''})
+      })
+      $('button').click(function(){
+        $('p').append('====append====') // 在标签内部尾部添加
+        .prepend('---prepend---') // 在标签内部前面添加
+        .after('after')
+        .before('<p>before</p>')
+        $('div').hide('show', function(){
+          // alert('unshow')
+        })
+        $('div').text(function(i, ori){
+          console.log('\n\n------ begin: 12 ------')
+          console.log(i)
+          console.log(ori)
+          console.log('------ end: 12 ------\n\n')
+        })
+        $('h3').remove() // 移除整个标签
+        $('h2').empty()  // 只移除标签内内容
+        $('h4').remove('.class1')
+      })
+
+    })
+  </script>
+</head>
+<body>
+  <div>12</div>
+  <input type="text" />
+  <button>button</button>
+  <p>origin p</p>
+  <h2>````h2</h2>
+  <h3>`````h3</h3>
+  <h4 >`````h4</h4>
+  <h4 class="class1">`````h4--class1</h4>
+</body>
+</html>

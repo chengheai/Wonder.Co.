@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div id="example">
+    <my-parent></my-parent>
+  </div>
+  <script src="../vue.js"></script>
+  <script>
+    var childNode = {
+      template: '<div>{{myMessage}}的类型是{{type}}</div>',
+      props: ['myMessage'],
+      computed:{
+        type(){
+          return typeof this.myMessage
+        }
+      }
+    };
+    var parentNode = {
+      //   :my-message='1'   number
+      template: `
+        <div class="parent">
+          <my-child :my-message='1'></my-child>
+        </div>
+    `,
+      components: {
+        'MyChild': childNode
+      },
+    };
+    new Vue({
+      el: '#example',
+      components: {
+        'MyParent': parentNode
+      }
+    })
+  </script>
+</body>
+
+</html>

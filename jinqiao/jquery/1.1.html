@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="jquery.js"></script>
+</head>
+
+<body>
+  <a href="http://jquery.com">default click action is prevented</a>
+  <div id="log" style="border: 2px solid firebrick"></div>
+  <script>
+    $("a").click(function (event) {
+      console.log(event)
+      event.preventDefault();
+      $('<h2/>').append('default ' + event.type + ' prevented').appendTo('#log');
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="jquery.js"></script>
+</head>
+<body>
+  <p id="test1">这是一个段落。</p>
+  <p id="test2">这是另外一个段落。</p>
+  <p>输入框: <input type="text" id="test3" value="菜鸟教程"></p>
+  <button id="btn1">设置文本</button>
+  <button id="btn2">设置 HTML</button>
+  <button id="btn3">设置值</button>
+  <script>
+    
+    $("#btn1").click(function(){
+        $("#test1").text("Hello world!");
+    });
+    $("#btn2").click(function(){
+        $("#test2").html("<b>Hello world!</b>");
+    });
+    $("#btn3").click(function(){
+        $("#test3").val("RUNOOB");
+    });
+
+
+    
+  // $("#btn1").click(function(){
+  //     $("#test1").text(function(i,origText){
+  //         return "旧文本: " + origText + " 新文本: Hello world! (index: " + i + ")"; 
+  //     });
+  // });
+  
+  // $("#btn2").click(function(){
+  //     $("#test2").html(function(i,origText){
+  //         return "旧 html: " + origText + " 新 html: Hello <b>world!</b> (index: " + i + ")"; 
+  //     });
+  // });
+
+
+  </script>
+</body>
+
+</html>
