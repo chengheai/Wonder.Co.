@@ -8,10 +8,22 @@
 </head>
 <body>
   <script>
-    let obj1 = {'name':'alex', 'age': 12};
-    let obj2 = {'sex': 'male'}
-    let o = Object.assign({}, obj1, obj2)  
-    console.log(o)
+    // let obj1 = {'name':'alex', 'age': 12};
+    // let obj2 = {'sex': 'male'};
+    // let o = Object.assign({}, obj1, obj2);
+    
+    // console.log(o)
+    let obj3 = {a: 1, b:2}
+    let obj4 = {a: 1,b:{c:2}}
+    let newb = Object.assign({}, obj4)
+    let newc = Object.assign({}, obj3)
+    // newb.b.c = 3
+    newb.b = { c:3}
+    newc.b = 3
+    console.log('obj3:',obj3)
+    console.log('newc:',newc)
+    console.log('obj4:',obj4)
+    console.log('newb:',newb)
   </script>
 </body>
 </html>

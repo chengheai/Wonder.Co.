@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // // 浅拷贝
+    // let obj = {a:{b:10}}
+    // function copy(obj){
+    //   let newObj = {};
+    //   for(let attr in obj){
+    //     newObj[attr] = obj[attr]
+    //   }
+    //   return newObj
+    // }
+    // let obj2 = copy(obj);
+    //   obj2.a.b = 20;
+    //   console.log(obj.a.b);  // 20 改变
+
+      // 深拷贝
+      function deepCopy(obj) { 
+        if(typeof obj != 'object'){
+          return obj;
+        }
+        let newObj = {};
+        for(let attr in obj){
+          newObj[attr] = deepCopy(obj[attr])
+        }
+        return newObj
+       }
+
+       let obj2 = deepCopy(obj);
+        obj2.a.b = 20;
+       console.log(obj.a.b);  // 10 未改变
+  </script>
+</body>
+</html>
