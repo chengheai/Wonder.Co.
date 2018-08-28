@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let str = 'cheng-he-ai';
+    let str1 = 'chengheai';
+   console.log(str1.split('')) // [c h e .....]
+    function test(str){
+      let arr = str.split('-') // [cheng he ai]
+      console.log(arr)
+      for( let i=0;i<arr.length;i++){
+        //arr[i].substring(1)  heng e i
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substring(1)
+      }
+      return arr.join('')
+    }
+    alert(test(str))
+  </script>
+</body>
+</html>
