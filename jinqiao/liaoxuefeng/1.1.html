@@ -164,13 +164,51 @@ indexOf总是返回第一个元素的位置，
 后续的重复元素位置与indexOf返回的
 位置不相等，因此被filter滤掉了。
 */
-var
-    r,
-    arr = ['apple', 'strawberry', 'banana', 'pear', 'apple', 'orange', 'orange', 'strawberry'];
-    r = arr.filter(function (element, index, self) {
-    return self.indexOf(element) === index;
-});
-console.log(r.toString());
+// var
+//     r,
+//     arr = ['apple', 'strawberry', 'banana', 'pear', 'apple', 'orange', 'orange', 'strawberry'];
+//     r = arr.filter(function (element, index, self) {
+//     return self.indexOf(element) === index;
+// });
+// console.log(r.toString());
+
+/// ==========sort
+//ASCII码排序
+// var arr = [10,20,1,2];
+// //console.log(arr.sort())  //[1, 10, 2, 20]
+// arr.sort(function (x, y) {
+//     if (x < y) {
+//         return -1;
+//     }
+//     if (x > y) {
+//         return 1;
+//     }
+//     return 0;
+// });
+// console.log(arr); // [1, 2, 10, 20]
+
+ /// abcd排序=========
+// var arr = ['Google', 'apple', 'Microsoft'];
+// arr.sort(function (s1, s2) {
+//     x1 = s1.toUpperCase();
+//     x2 = s2.toUpperCase();
+//     if (x1 < x2) {
+//         return -1;
+//     }
+//     if (x1 > x2) {
+//         return 1;
+//     }
+//     return 0;
+// }); // ['apple', 'Google', 'Microsoft']
+
+// sort()方法会直接对Array进行修改，
+// 它返回的结果仍是当前Array：
+// var a1 = ['B', 'A', 'C'];
+// var a2 = a1.sort();
+// a1; // ['A', 'B', 'C']
+// a2; // ['A', 'B', 'C']
+// a1 === a2; // true, a1和a2是同一对象
+
 </script>
 </body>
 </html>

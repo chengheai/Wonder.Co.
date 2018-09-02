@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  <script>
+    var oUl = document.querySelector('ul');
+    var oLi = document.querySelectorAll('li');
+    oUl.removeChild(oLi)  /// 有誤
+    // ========location==============
+  //  http://www.example.com:8080/path/index.html?a=1&b=2#TOP
+  location.protocol; // 'http'
+  location.host; // 'www.example.com'
+  location.port; // '8080'
+  location.pathname; // '/path/index.html'
+  location.search; // '?a=1&b=2'
+  location.hash; // 'TOP'
+  document.title = 'JavaScript!';
+  console.log(document.cookie)
+  console.log(history)
+</script>
+</body>
+</html>
