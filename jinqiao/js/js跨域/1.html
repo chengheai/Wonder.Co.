@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    /*
+    子域名
+    www.a.com   b.a.com
+    1.document.domain = 'a.com'
+    2.服务器代理XMLHttpResquest代理文件
+    3.script标签  jsonp  json + padding 
+    4.location.hash
+    
+    */ 
+    // function box(json){
+    //   alert(json.name)
+    // }
+    // function creatJs(surl){
+    //   var oScript = document.createElement('script');
+    //   oScript.type='text/javascript';
+    //   oScript.src = surl;
+    //   document.querySelector('head').appendChild(oScript)
+    // }
+    // creatJs('jsonp.js')
+
+    function box(json){
+      console.log('json:', json.name)
+    }
+  </script>
+  <script src="jsonp.js"></script>
+</head>
+<body>
+  
+</body>
+</html>

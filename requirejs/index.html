@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script data-main="main" src="require.js"></script>
+  <script>
+    // require(['a']);
+    // require(['a'],  function(){
+    //   alert('load finished')
+    // })
+    // require.config({
+    //   paths: {
+    //     'jquery': ["http://libs.baidu.com/jquery/2.0.3/jquery", 'js/jquery'], // 如果远程没有加载就加载本地的
+    //     // 'a':'a'  不能写成 a    
+    //   }
+    // })
+    require(['jquery', 'a'],function($){
+      $(function(){
+        alert('load finished');
+      })
+    })
+
+   // callback函数可以添加别的依赖
+    // require(["jquery","underscore"],function($, _){
+    //   $(function(){
+    //       _.each([1,2,3],alert);
+    //   })
+    // })
+  </script>
+</head>
+<body>
+  <span>body</span>
+</body>
+</html>

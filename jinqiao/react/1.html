@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>react与原生js的区别</title>
+</head>
+<body>
+  <script>
+    // 原生： 
+    /*
+    <button onclick="activateLasers()">
+    Activate Lasers
+    </button>
+
+    a href="#" onclick="console.log('The link was clicked.'); return false">
+      Click me
+    </a>
+    */
+   // react：
+   /*
+    <button onClick={activateLasers}>
+      Activate Lasers
+    </button> 
+
+    e.preventDefault();
+   */
+    const numbers = [1,2,3,4,5];
+    const doubled = numbers.map((number) => number * 2)
+    console.log(doubled)
+  </script>
+</body>
+</html>
