@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var str = '26161313561454';
+    
+    function test(str) {
+      var Inum = str.length%3;
+      var prev = '';
+      var arr = [];
+      var iNow = 0;
+      var tmp = '';
+      if(Inum != 0){
+        prev = str.substring(0, Inum);
+        arr.push(prev);
+      }
+      str = str.substring(Inum)
+      for( var i=0;i<str.length;i++){
+        iNow++;
+        tmp +=str[i];
+        if(iNow==3 && tmp){
+          arr.push(tmp);
+          tmp = '';
+          iNow =0;
+        }
+      }
+      return arr.join(',')
+    }
+    alert(test(str))
+  </script>
+</body>
+</html>

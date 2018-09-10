@@ -8,9 +8,19 @@
 </head>
 <body>
   <script>
-    var str = 'abcd';
-    console.log(str.split(''))
-    
+    let str = 'cheng-he-ai';
+    let str1 = 'chengheai';
+   console.log(str1.split('')) // [c h e .....]
+    function test(str){
+      let arr = str.split('-') // [cheng he ai]
+      console.log(arr)
+      for( let i=0;i<arr.length;i++){
+        //arr[i].substring(1)  heng e i
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substring(1)
+      }
+      return arr.join('')
+    }
+    alert(test(str))
   </script>
 </body>
 </html>

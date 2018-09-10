@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // ========函數==============
+    // =======閉包========
+    // function count(){
+    //   var arr = [];
+    //   for(var i=1;i<=3;i++){
+    //     arr.push(function () { 
+    //       return i * i
+    //      })
+    //   }
+    //   return arr;
+    // }
+    // var results = count();
+    // // console.log(results)
+    // var f1 = results[0];
+    // var f2 = results[1];
+    // var f3 = results[2];
+    // console.log(f1());//16
+    // console.log(f2()); //16
+    // console.log(f3()); //16
+
+    // function a(inittial){
+    //   var x = initial || 0;
+    //   return {
+    //     inc: function () { 
+    //       x+= 1;
+    //       return x;
+    //      }
+    //   }
+    // }
+    // var c1 = create_counter();
+    // c1.inc(); // 1
+    // c1.inc(); // 2
+    // c1.inc(); // 3
+
+    // var c2 = create_counter(10);
+    // c2.inc(); // 11
+    // c2.inc(); // 12
+    // c2.inc(); // 13
+    /// ====箭頭函數=====
+    // x => x * x;
+    // function (x){
+    //   return x * x
+    // }
+    // 两个参数:
+    // (x, y) => x * x + y * y
+
+    // // 无参数:
+    // () => 3.14
+
+    // // 可变参数:
+    // (x, y, ...rest) => {
+    //     var i, sum = x + y;
+    //     for (i=0; i<rest.length; i++) {
+    //         sum += rest[i];
+    //     }
+    //     return sum;
+    // }
+    // // SyntaxError:
+    // x => { foo: x }
+    // // ok:
+    // x => ({ foo: x })
+    // ====this====
+    // var obj = {
+    //   birth: 1990,
+    //   getAge: function(){
+    //     var b= this.birth;
+    //     var fn = function(){
+    //       return new Date().getFullYear() - this.birth;
+    //     }
+    //     return fn();
+    //   }
+    // }
+    // console.log(obj.getAge())  //NaN
+    // var obj = {
+    //   birth: 1990,
+    //   getAge: function(){
+    //     var b= this.birth;
+    //     var fn = () => new Date().getFullYear() - this.birth;
+    //     return fn()
+    //   }
+    // }
+    // console.log(obj.getAge()) // 28
+    // var arr = [10, 20, 1, 2];
+    // arr.sort((x, y) => {
+    // if(x > y){
+    //   return 1
+    //   }
+    //   if(x<y){
+    //   return -1}
+    //   });
+    //   console.log(arr); // [1, 2, 10, 20]
+    // =========类型========
+    /*
+      typeof 123; // 'number'
+      typeof NaN; // 'number'
+      typeof 'str'; // 'string'
+      typeof true; // 'boolean'
+      typeof undefined; // 'undefined'
+      typeof Math.abs; // 'function'
+      typeof null; // 'object'
+      typeof []; // 'object'
+      typeof {}; // 'object'
+    
+    */
+    // var n = new Number(123); // 123,生成了新的包装类型
+    // var b = new Boolean(true); // true,生成了新的包装类型
+    // var s = new String('str'); // 'str',生成了新的包装类型
+    // 虽然包装对象看上去和原
+    // 来的值一模一样，显示出来
+    // 也是一模一样，但他们的类
+    // 型已经变为object了！所以，包
+    // 装对象和原始值用===比较会返回false
+    // typeof new Number(123); // 'object'
+    // new Number(123) === 123; // false
+
+    // 123.toString(); // SyntaxError
+    // 123..toString(); // '123', 注意是两个点！
+    // (123).toString(); // '123'
+
+    // function Student(name){
+    //   this.name = name;
+    //   this.hello = function () { 
+    //     alert('hello, '+ this.name+'!')
+    //    }
+    //  // //  hello()
+    // }
+    // // Student('alex')
+    // var xiaoming = new Student('小明');
+    // console.log(xiaoming.name);
+    // xiaoming.hello()
+</script>
+</body>
+</html>
