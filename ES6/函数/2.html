@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+    forEach 没有返回值
+    map有返回值
+    
+    */
+    let arr = [1,2,3,4,5];
+    const arr1 = [1, 4, 9, 16, 25];
+    const square = x =>{
+      return x * x
+    }
+    const sqrt = x =>{
+      return Math.sqrt(x)
+    }
+    let result = arr.forEach((item, index, other) =>{
+      // console.log('item:',item)
+      // console.log('index:',index)
+      // console.log('other:',other)
+      other[index] = square(item)
+    });
+    
+    console.log(result) // undefined
+    console.log(arr) // 结果
+    
+
+    ////
+
+    let result1 = arr1.map((item, index, other) =>{
+      debugger
+      return other[index] = sqrt(item)
+    })
+    console.log(result1)
+    console.log(arr1)
+  </script>
+</body>
+</html>
