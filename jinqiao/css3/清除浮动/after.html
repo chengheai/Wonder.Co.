@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .box{
+      padding: 10px;
+      background: #cccccc;
+    }
+    img{
+      float: left;
+    }
+    /* 1*/
+    /* .box:after{
+      display:block;
+      content:"clear"; 
+      height:0; 
+      clear:both; 
+      overflow:hidden; 
+      visibility:hidden;
+    } */
+    /* 2*/
+    .box{
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="">
+  </div>
+</body>
+</html>
