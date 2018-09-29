@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .aaa, .bbb{
+      width: 80px;
+      height: 38px;
+      background: salmon;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      color: aliceblue;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="aaa">test</div>
+  <div id="box">
+    <div class="bbb">test1</div>
+  </div>
+  <script>
+    document.addEventListener("touchstart", function(e){
+      // console.log(e)
+      console.log('tag:', e.target)
+      if(e.target.className =='aaa'){
+        alert(1)
+      }
+    })
+    let Box = document.querySelectorAll('#box');
+    // let Box1 = document.getElementById('box');
+    let b = document.querySelectorAll('body');
+    console.log('document:',document)
+    console.log('body:', b)
+    console.log('box:',Box)
+    // console.log('box:',Box1)
+    Box[0].addEventListener("touchstart", function(e){
+      if(e.target.className =='bbb'){
+        alert(2)
+      }
+    })
+  </script>
+</body>
+</html>
