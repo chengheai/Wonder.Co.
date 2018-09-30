@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+    
+    5元/瓶 酒
+    5个瓶盖/瓶 酒
+    3个空瓶/瓶 酒
+    
+    
+    */
+    var xinjiu = 0, jiu = 0;
+var pin = 0;
+var gai = 0;
+var x = 100;
+function tt () {
+  if (x >= 5) {
+    xinjiu = xinjiu + ~~(x / 5);
+    x = x % 5;
+  }
+  if (pin >= 3) {
+    xinjiu = xinjiu + ~~(pin / 3);
+    pin = pin % 3;
+  }
+  if (gai >= 5) {
+    xinjiu = xinjiu + ~~(gai / 5);
+    gai = gai % 5;
+  }
+  jiu = jiu + xinjiu;
+  gai = gai + xinjiu;
+  pin = pin + xinjiu;
+  xinjiu = 0;
+  if (x >= 5 || gai >= 5 || pin >= 3) {
+    tt ();
+  } else {
+    console.log ('喝了' + jiu + '瓶酒，剩下' + gai + '瓶盖,' + pin + '空瓶');
+  }
+}
+tt()
+  </script>
+</body>
+</html>
