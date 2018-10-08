@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function p(){};
+    console.log(p.prototype.constructor === p) // true
+    var aa = new p();
+    console.log(aa.constructor === p) // true
+    console.log(aa.constructor === p.prototype.constructor) //true
+    console.log(aa.hasOwnProperty('constructor')) // false
+
+
+    function F() {};
+    var f = new F();
+
+    f.constructor === F // true
+    f.constructor === RegExp // false
+
+
+    function Constr() {}
+    var x = new Constr();
+
+    var y = new x.constructor();
+    y instanceof Constr // true
+  </script>
+</body>
+</html>

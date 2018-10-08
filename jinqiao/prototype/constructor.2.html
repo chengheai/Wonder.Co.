@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // instanceof运算符返回一个布尔值，表示对象是否为某个构造函数的实例。
+
+    // v instanceof Vehicle
+    // // 等同于
+    // Vehicle.prototype.isPrototypeOf(v)
+
+    // var x = [1, 2, 3];
+    // var y = {};
+    // x instanceof Array // true
+    // y instanceof Object // true
+
+    function Person(name){
+      this.name = name;
+    }
+
+    var aa = new Person();
+    console.log(aa.constructor.name) // Person
+    // console.log(Person.prototype.constructor === Person) // true
+
+    //bad
+    // Person.prototype = {
+    //   method: function() {}
+    // };
+    //good
+    // Person.prototype = {
+    //   constructor: Person,
+    //   method: function(){}
+    // }
+    // better
+    Person.prototype.method = function(){};
+    console.log(Person.prototype.constructor === Person) // 
+  </script>
+</body>
+</html>

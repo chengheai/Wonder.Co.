@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    input[type=text] {
+      width: 100px;
+      -webkit-transition: width .35s ease-in-out;
+      transition: width .35s ease-in-out;
+    }
+    input[type=text]:focus {
+      width: 250px;
+    }
+    div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: aliceblue;
+      background: black;
+      font-size: 30px;
+      width: 100px;
+      height: 100px;
+      transition: width 2s;
+    }
+    div:hover{
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <input type="text">
+  <br>
+  <div>123</div>
+</body>
+</html>
