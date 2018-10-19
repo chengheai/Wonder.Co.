@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .right{
+      position: relative;
+      width: 100px;
+      height: 200px;
+      overflow: hidden;
+    }
+    .rightcircle{
+      width: 160px;
+      height: 160px;
+      border: 20px solid transparent;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border-top:20px solid green;
+    border-right:20px solid green;
+    transform : rotate(-135deg);
+    /* -moz-transform : rotate(45deg);
+    -o-transform : rotate(45deg);
+    transform : rotate(45deg); 旋转45度 */
+    }
+  </style>
+</head>
+<body>
+  <div class="right">
+    <div class="rightcircle"></div>
+  </div>
+</body>
+</html>
