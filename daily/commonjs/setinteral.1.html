@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- <el-progress :percentage="percentage" :stroke-width="18" color="#8e71c7"></el-progress> -->
+    <el-progress :text-inside="true" :stroke-width="18" :percentage="percentage" color="rgba(142, 113, 199, 0.7)"></el-progress>
+    <el-progress type="circle" :percentage="percentage"></el-progress>
+    <el-progress type="circle" :percentage="percentage" color="#8e71c7"></el-progress>
+    <h1>{{msg}}</h1>
+  </div>
+</body>
+<script>
+  var vm = new Vue({
+    el: '#app',
+    data(){
+      return {
+        percentage: 0,
+        msg: ''
+      }
+    },
+    methods: {
+      test(){
+        this.percentage = this.percentage + 0.1;
+        this.percentage = Math.floor(this.percentage * 100) / 100
+        if(this.percentage > 100){
+          this.percentage = 100;
+          this.msg = 'hello 老玻璃！'
+        }
+      }
+    },
+    mounted() {
+      setInterval(this.test,10)
+    },
+  })
+</script>
+</html>

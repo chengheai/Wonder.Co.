@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <textarea name="" id="text" cols="30" rows="5"></textarea> 
+  <script type="text/javascript"> 
+    var text = document.getElementById('text'); 
+    text.onkeydown = function(e) { 
+      console.log('keydown'); 
+      if(e.keyCode == 13) { 
+        console.log('keydown enter send'); 
+      } 
+      // console.log('value', text.value); 
+    } 
+    // text.onkeypress = function(e) { 
+    //   console.log('keypress'); 
+    //   console.log('value', text.value); 
+    //         if(e.keyCode == 13) { 
+    //     console.log('keyup enter send'); 
+    //   } 
+    // } 
+    // text.onkeyup = function(e) { 
+    //   console.log('keyup'); 
+    //   if(e.keyCode == 13) { 
+    //     console.log('keyup enter send'); 
+    //   } 
+    //   // console.log('value', text.value); 
+    // } 
+  </script>
+</body>
+</html>

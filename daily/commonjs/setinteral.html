@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h2></h2>
+  <script>
+    var i = 0;
+    var Oh2 = document.getElementsByTagName('h2');
+    var aa = setInterval(function(){
+      console.log(Oh2)
+      
+      if(i > 100){
+        aa = clearInterval(aa)
+      }
+      i = i + 0.1;
+      Oh2.innerHTML = i;
+    }, 10)
+  </script>
+</body>
+</html>
